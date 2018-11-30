@@ -1,0 +1,331 @@
+/*
+Navicat MySQL Data Transfer
+
+Source Server         : localhost
+Source Server Version : 50528
+Source Host           : localhost:3306
+Source Database       : movie
+
+Target Server Type    : MYSQL
+Target Server Version : 50528
+File Encoding         : 65001
+
+Date: 2018-11-30 16:43:29
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for movies
+-- ----------------------------
+DROP TABLE IF EXISTS `movies`;
+CREATE TABLE `movies` (
+  `title` varchar(50) DEFAULT NULL,
+  `url` varchar(50) DEFAULT NULL,
+  `score` varchar(50) DEFAULT NULL,
+  `director` varchar(50) DEFAULT NULL,
+  `role` varchar(50) DEFAULT NULL,
+  `type` varchar(50) DEFAULT NULL,
+  `country` varchar(50) DEFAULT NULL,
+  `year` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of movies
+-- ----------------------------
+INSERT INTO `movies` VALUES ('西瓜 すいか', 'https://movie.douban.com/subject/1986021/', '9.3', '佐藤东弥 / 吉野洋 / 佐久间纪佳', '小林聪美 / 友坂理惠 / 市川实日子', '剧情 / 喜剧', '日本', '2003');
+INSERT INTO `movies` VALUES ('木更津猫眼 木更津キャッツアイ', 'https://movie.douban.com/subject/1465676/', '9.0', '金子文纪 / 片山修 / 宫藤官九郎', '冈田准一 / 樱井翔 / 冈田义德', '喜剧 / 剧情', '日本', '2002');
+INSERT INTO `movies` VALUES ('温柔时刻 優しい時間', 'https://movie.douban.com/subject/1903286/', '9.0', '田岛大辅 / 宫本理江子 / 西浦正记', '寺尾聪 / 二宫和也 / 长泽雅美', '剧情 / 家庭', '日本', '2005');
+INSERT INTO `movies` VALUES ('虎与龙 タイガー&ドラゴン', 'https://movie.douban.com/subject/2173112/', '9.2', '金子文纪 / 片山修 / 坪井敏雄', '长濑智也 / 冈田准一 / 西田敏行', '剧情 / 喜剧', '日本', '2005');
+INSERT INTO `movies` VALUES ('梦想加州 夢のカリフォルニア', 'https://movie.douban.com/subject/2245497/', '8.7', '土井裕泰 / 平野俊一 / 三城真一', '堂本刚 / 柴崎幸 / 国仲凉子', null, '日本', '2002');
+INSERT INTO `movies` VALUES ('青之时代 青の時代', 'https://movie.douban.com/subject/2052451/', '8.5', '松原浩 / 那須田淳 / 片山修', '堂本刚 / 安藤政信 / 奥菜惠', '剧情', '日本', '1998');
+INSERT INTO `movies` VALUES ('跟我说爱我 愛していると言ってくれ', 'https://movie.douban.com/subject/1474591/', '8.5', '生野慈朗 / 土井裕泰 / 福泽克雄', '丰川悦司 / 常盘贵子 / 麻生祐未', '爱情', '日本', '1995');
+INSERT INTO `movies` VALUES ('今生只爱你 君だけに愛を Love Forever', 'https://movie.douban.com/subject/6080802/', '暂无评分', '細野英延 / 五木田亮一', '野村宏伸 / 松下由树', '爱情', '日本', '1991');
+INSERT INTO `movies` VALUES ('爱的竞走 ポールポジション! 愛しき人へ…', 'https://movie.douban.com/subject/3542444/', '暂无评分', '佐藤東彌', '加勢大周 / 高岡早紀 / 田中律子', null, '日本', '1992');
+INSERT INTO `movies` VALUES ('美丽人生 ビューティフルライフ', 'https://movie.douban.com/subject/1465021/', '8.3', '生野慈朗 / 土井裕泰', '木村拓哉 / 常盘贵子 / 水野美纪', '剧情 / 爱情', '日本', '2000');
+INSERT INTO `movies` VALUES ('大和抚子 やまとなでしこ', 'https://movie.douban.com/subject/1483813/', '8.0', '若松节朗 / 平野真', '松岛菜菜子 / 堤真一 / 矢田亚希子', '喜剧 / 剧情 / 爱情', '日本', '2000');
+INSERT INTO `movies` VALUES ('白影 白い影', 'https://movie.douban.com/subject/2276936/', '8.4', '吉田健 / 平野俊一 / 福澤克雄 / 金子文紀', '中居正广 / 竹内结子 / 上川隆也', null, '日本', '2001');
+INSERT INTO `movies` VALUES ('新选组 新選組!', 'https://movie.douban.com/subject/1853688/', '8.5', '清水一彥 / 吉川邦夫 / 伊勢田雅也 / 吉田浩樹', '香取慎吾 / 山本耕史 / 堺雅人', '剧情 / 历史 / 战争', '日本', '2004');
+INSERT INTO `movies` VALUES ('回首又见他 振り返れば奴がいる', 'https://movie.douban.com/subject/1441094/', '9.0', '若松节朗 / 河野圭太 / 木下高男', '织田裕二 / 石黑贤 / 鹿贺丈史', '剧情', '日本', '1993');
+INSERT INTO `movies` VALUES ('不需要爱的夏天 愛なんていらねえよ、夏', 'https://movie.douban.com/subject/1759770/', '8.8', '堤幸彦 / 松原浩 / 今井夏木', '渡部笃郎 / 广末凉子 / 藤原龙也', '剧情', '日本', '2002');
+INSERT INTO `movies` VALUES ('水男孩 ウォーターボーイズ', 'https://movie.douban.com/subject/1795576/', '8.4', '佐藤祐市 / 村上正典 / 高桥伸之', '山田孝之 / 森山未来 / 瑛太', '喜剧 / 运动', '日本', '2003');
+INSERT INTO `movies` VALUES ('圣者的行进 聖者の行進', 'https://movie.douban.com/subject/1465794/', '8.9', '吉田健 / 松原浩 / 那须田淳', '石田壹成 / 酒井法子 / 广末凉子', '剧情', '日本', '1998');
+INSERT INTO `movies` VALUES ('给深爱的你 爱し君へ', 'https://movie.douban.com/subject/2252763/', '8.1', '水田成英 / 林彻 / 川村泰祐', '菅野美穗 / 藤木直人 / 伊东美咲', '剧情 / 爱情', '日本', '2004');
+INSERT INTO `movies` VALUES ('敬启，父亲大人 拝啓、父上樣', 'https://movie.douban.com/subject/1959063/', '9.1', '宫本理江子 / 西浦正记', '二宫和也 / 高岛礼子 / 横山裕', '剧情 / 家庭', '日本', '2007');
+INSERT INTO `movies` VALUES ('池袋西口公园 池袋ウエストゲートパーク', 'https://movie.douban.com/subject/1465284/', '8.7', '堤幸彦 / 金子文纪 / 伊佐野英樹', '长濑智也 / 加藤爱 / 洼冢洋介', '剧情 / 动作', '日本', '2000');
+INSERT INTO `movies` VALUES ('金田一少年事件簿1 金田一少年の事件簿 第1シリーズ', 'https://movie.douban.com/subject/2276934/', '8.9', '堤幸彦 / 佐藤东弥 / 櫨山裕子 / 金田和樹', '堂本刚 / 友坂理惠 / 古尾谷雅人', '剧情 / 悬疑 / 冒险', '日本', '1995');
+INSERT INTO `movies` VALUES ('秃鹫 ハゲタカ', 'https://movie.douban.com/subject/1998540/', '8.1', '大友启史 / 井上刚 / 堀切园健太郎', '大森南朋 / 松田龙平 / 栗山千明', null, '日本', '2007');
+INSERT INTO `movies` VALUES ('司法研习八人组 ビギナー', 'https://movie.douban.com/subject/2295864/', '8.6', '水田成英 / 川村泰祐 / 松山博昭', '米姆拉 / 小田切让 / 松雪泰子', '剧情', '日本', '2003');
+INSERT INTO `movies` VALUES ('漂流教室 ロング・ラブレター〜漂流教室〜', 'https://movie.douban.com/subject/1465088/', '8.3', '水田成英', '常盘贵子 / 洼冢洋介 / 山下智久', '爱情', '日本', '2002');
+INSERT INTO `movies` VALUES ('天使之爱 ピュア', 'https://movie.douban.com/subject/1760078/', '8.0', '中江功 / 田岛大辅', '和久井映見 / 堤真一 / 高橋克典', '爱情', '日本', '1996');
+INSERT INTO `movies` VALUES ('夏之雪 Summer Snow', 'https://movie.douban.com/subject/1481065/', '8.4', '松原浩 / 远藤环 / 平野俊一', '堂本刚 / 广末凉子 / 今井翼', '剧情 / 爱情', '日本', '2000');
+INSERT INTO `movies` VALUES ('人间失格：假如我死的话 人間・失格～たとえばぼくが死んだら', 'https://movie.douban.com/subject/1465081/', '8.9', '吉田健 / 吉田秋生', '堂本刚 / 堂本光一 / 赤井英和', '剧情', '日本', '1994');
+INSERT INTO `movies` VALUES ('爱情白皮书 あすなろ白書', 'https://movie.douban.com/subject/1484486/', '8.1', '木村达昭 / 新城毅彦', '石田光 / 筒井道隆 / 木村拓哉', '剧情 / 爱情', '日本', '1993');
+INSERT INTO `movies` VALUES ('柏拉图式 プラトニック', 'https://movie.douban.com/subject/25861602/', '8.3', '大塚恭司 / 长沼诚 / 吉野洋', '中山美穗 / 堂本刚 / 小泉孝太郎', null, '日本', '2014');
+INSERT INTO `movies` VALUES ('没有玫瑰的花店 薔薇のない花屋', 'https://movie.douban.com/subject/2377585/', '8.6', '中江功 / 西坂瑞城', '香取慎吾 / 竹内结子 / 八木优希', '剧情 / 爱情', '日本', '2008');
+INSERT INTO `movies` VALUES ('家庭连续剧 ホームドラマ!', 'https://movie.douban.com/subject/3087445/', '8.9', '平野俊一 / 片山修 / 酒井圣博', '堂本刚 / 中山裕介 / 井上真央', '剧情', '日本', '2004');
+INSERT INTO `movies` VALUES ('流星旅行车 流星ワゴン', 'https://movie.douban.com/subject/26268692/', '8.3', '福澤克雄 / 棚澤孝義 / 田中健太', '西岛秀俊 / 香川照之 / 井川遥', '剧情', '日本', '2015');
+INSERT INTO `movies` VALUES ('这里才有的幸福 ここにある幸せ', 'https://movie.douban.com/subject/26022309/', '7.4', '廣瀬正雄', '松田翔太 / 宫本信子 / 中村映里子', null, '日本', '2015');
+INSERT INTO `movies` VALUES ('东方快车谋杀案 オリエント急行殺人事件', 'https://movie.douban.com/subject/25962053/', '7.3', '河野圭太', '野村万斋 / 松岛菜菜子 / 二宫和也', '剧情 / 犯罪 / 悬疑', '日本', '2015');
+INSERT INTO `movies` VALUES ('2/2', 'https://movie.douban.com/subject/1919918/', '5.2', '伊藤秀裕', '濑户朝香 / 渡部笃郎 / 高岛礼子', '剧情', '日本', '2005');
+INSERT INTO `movies` VALUES ('山田孝之的东京都北区赤羽 山田孝之の東京都北区赤羽', 'https://movie.douban.com/subject/26274134/', '8.2', '松江哲明 / 山下敦弘', '山田孝之 / 绫野刚 / 大根仁', '剧情 / 喜剧', '日本', '2015');
+INSERT INTO `movies` VALUES ('对不起青春 ごめんね青春！', 'https://movie.douban.com/subject/25940269/', '9.0', '山室大辅 / 金子文纪 / 福田亮介', '锦户亮 / 满岛光 / 永山绚斗', '剧情 / 喜剧', '日本', '2014');
+INSERT INTO `movies` VALUES ('绑匪的女儿 翳りゆく夏', 'https://movie.douban.com/subject/26041851/', '8.3', '波多野贵文', '渡部笃郎 / 时任三郎 / 门胁麦', '犯罪 / 悬疑', '日本', '2015');
+INSERT INTO `movies` VALUES ('怪医黑杰克 ブラック・ジャックIII 悲劇の天才料理人', 'https://movie.douban.com/subject/2024531/', '暂无评分', '堤幸彥', '本木雅弘 / 池内博之 / 须藤理彩', null, '日本', '2001');
+INSERT INTO `movies` VALUES ('怪医黑杰克 ブラック・ジャック 臓器農場行き幽霊バス', 'https://movie.douban.com/subject/1942314/', '7.2', '堤幸彦', '本木雅弘 / 永作博美 / 三觜要介', null, '日本', '2000');
+INSERT INTO `movies` VALUES ('巷说百物语 狐者异 巷説百物語 狐者異', 'https://movie.douban.com/subject/6852380/', '暂无评分', '堤幸彦', '渡部篤郎 / 小池栄子 / 吹越満', null, '日本', '2005');
+INSERT INTO `movies` VALUES ('弟', 'https://movie.douban.com/subject/3081290/', '7.3', '若松节朗', '长濑智也 / 高岛礼子 / 加藤 あい(加藤 爱)', null, '日本', '2004');
+INSERT INTO `movies` VALUES ('瘟神系列：破门 破門（疫病神シリーズ）', 'https://movie.douban.com/subject/26241770/', '8.6', '木村尚 / 森淳一 / 藤澤浩和', '北村一辉 / 滨田岳 / 山下莉绪', '剧情 / 犯罪', '日本', '2015');
+INSERT INTO `movies` VALUES ('今天是再见的日子 今日の日はさようなら', 'https://movie.douban.com/subject/24753685/', '8.3', '菅原伸太郎', '大野智 / 深田恭子 / 山田凉介', '剧情', '日本', '2013');
+INSERT INTO `movies` VALUES ('大野智meets若冲 若冲ミラクルワールド', 'https://movie.douban.com/subject/11627119/', '9.2', 'NHK', '大野智', '纪录片', '日本', '2011');
+INSERT INTO `movies` VALUES ('上锁的房间 鍵のかかった部屋', 'https://movie.douban.com/subject/10521668/', '7.8', '松山博昭 / 加藤裕将 / 石井祐介', '大野智 / 户田惠梨香 / 佐藤浩市', '喜剧 / 悬疑', '日本', '2012');
+INSERT INTO `movies` VALUES ('刑警二人组 ダブルス〜二人の刑事', 'https://movie.douban.com/subject/21360430/', '7.0', '塚本連平 / 常廣丈太', '伊藤英明 / 坂口宪二 / 夏菜', '剧情 / 犯罪', '日本', '2013');
+INSERT INTO `movies` VALUES ('世界奇妙物语 2014年秋之特别篇 世にも奇妙な物語 \'14秋の特別編', 'https://movie.douban.com/subject/25894468/', '6.8', '前田司郎 / 松木創 / 後藤庸介 / 村上正典 / 岩田和行', '户田惠梨香 / 平山浩行 / 多部未华子', '剧情 / 科幻 / 悬疑 / 奇幻 / 惊悚', '日本', '2014');
+INSERT INTO `movies` VALUES ('昼颜：工作日下午3点的恋人们 昼顔～平日午後3時の恋人たち～', 'https://movie.douban.com/subject/25897313/', '8.6', '西谷弘 / 高野舞 / 西坂瑞城', '上户彩 / 斋藤工 / 吉濑美智子', '剧情 / 爱情', '日本', '2014');
+INSERT INTO `movies` VALUES ('彼得的葬礼 ペテロの葬列', 'https://movie.douban.com/subject/25887305/', '8.3', '金子文紀 / 岡本伸吾 / 竹村謙太郎 / 山﨑銃司', '小泉孝太郎 / 长谷川京子 / 国仲凉子', '犯罪 / 悬疑', '日本', '2014');
+INSERT INTO `movies` VALUES ('速水重道的厨房 MOCO\'S キッチン', 'https://movie.douban.com/subject/25814978/', '8.4', null, '速水重道', null, '日本', '2011');
+INSERT INTO `movies` VALUES ('命运 赤い運命', 'https://movie.douban.com/subject/10733476/', '暂无评分', '降旗康男', '宇津井健 / 山口百恵', null, '日本', '1976');
+INSERT INTO `movies` VALUES ('朋友的恋人 友達の恋人', 'https://movie.douban.com/subject/3126670/', '6.2', '吉田健 / 松原浩 那須田淳', '桜井幸子 (饰演 里美真子) / 瀬戸朝香 (饰演 水沢晶) / 安藤政信 (饰演 柏木朋也)', null, '日本', '1997');
+INSERT INTO `movies` VALUES ('五岛医生诊疗所2004 Dr.コトー診療所2004', 'https://movie.douban.com/subject/4258549/', '8.8', '中江功 / 小林和宏 / 平井秀樹', '吉冈秀隆 / 柴崎幸 / 时任三郎', '剧情', '日本', '2004');
+INSERT INTO `movies` VALUES ('琉球之风 琉球の風', 'https://movie.douban.com/subject/2276972/', '暂无评分', '山田信夫', '沢田研二 / 寺島しのぶ / 田中燁子', null, '日本', '1993');
+INSERT INTO `movies` VALUES ('热海的搜查官 熱海の捜査官', 'https://movie.douban.com/subject/5153024/', '8.4', '三木聪', '小田切让 / 栗山千明 / 松重丰', '喜剧 / 悬疑', '日本', '2010');
+INSERT INTO `movies` VALUES ('天体观测 天体観測', 'https://movie.douban.com/subject/2274944/', '8.0', '西谷弘 / 都筑淳一', '伊藤英明 / 坂口宪二 / オダギリジョー(小田切 让)', '剧情', '日本', '2002');
+INSERT INTO `movies` VALUES ('孤身走我路 …ひとりでいいの', 'https://movie.douban.com/subject/25865506/', '暂无评分', '吉野洋、斎藤郁宏、金田和樹', '泽口靖子 / 別所哲也 / 石田百合子', '爱情', '日本', '1992');
+INSERT INTO `movies` VALUES ('无名毒 名もなき毒', 'https://movie.douban.com/subject/24733059/', '7.6', '塚原あゆ子 / 金子文紀 / 山本剛義 / 竹村謙太郎', '小泉孝太郎 / 深田恭子 / 真矢みき', '剧情', '日本', '2013');
+INSERT INTO `movies` VALUES ('约会～恋爱究竟是什么呢～ デート 〜恋とはどんなものかしら〜', 'https://movie.douban.com/subject/26271868/', '8.6', '武内英树 / 石川淳一', '杏 / 长谷川博己 / 国仲凉子', '剧情 / 喜剧', '日本', '2015');
+INSERT INTO `movies` VALUES ('神，再多给点时间 神様、もう少しだけ', 'https://movie.douban.com/subject/1464829/', '7.9', '武内英树 / 田岛大辅 / 岩本仁志 / 西浦匡规', '金城武 / 深田恭子 / 仲间由纪惠', '爱情', '日本', '1998');
+INSERT INTO `movies` VALUES ('危险情人 ストーカー逃げきれね愛', 'https://movie.douban.com/subject/3008902/', '8.3', '上川伸广 / 唐木昭浩', '高冈早纪 / 渡部笃郎', null, '日本', '1997');
+INSERT INTO `movies` VALUES ('野心国度 野望の国', 'https://movie.douban.com/subject/20254326/', '暂无评分', '吉野洋、佐藤东弥', '近藤真彦 / 绪形 拳 / 竹下景子', '剧情 / 爱情 / 历史 / 战争', '日本', '1989');
+INSERT INTO `movies` VALUES ('大川端侦探社 リバースエッジ 大川端探偵社', 'https://movie.douban.com/subject/25804453/', '8.5', '大根仁 / 神徳幸治', '小田切让 / 石桥莲司 / 小泉麻耶', '剧情 / 悬疑', '日本', '2014');
+INSERT INTO `movies` VALUES ('不能不爱 愛さずにいられない', 'https://movie.douban.com/subject/20254299/', '暂无评分', '佐藤东弥、中岛悟、饭冢正彦', '吉田荣作 / 东干久 / 财前直见', '剧情 / 爱情 / 家庭', '日本', '1991');
+INSERT INTO `movies` VALUES ('浪花金融道 6 ナニワ金融道 ６', 'https://movie.douban.com/subject/4677359/', '7.5', '平野真', '池胁千鹤 / 高冈早纪 / 小林薰', null, '日本', '2005');
+INSERT INTO `movies` VALUES ('好想拥抱你 抱きしめたい!', 'https://movie.douban.com/subject/7005132/', '8.4', '河毛俊作', '浅野温子 / 浅野优子 / 本木雅弘', null, '日本', '1988');
+INSERT INTO `movies` VALUES ('最后的歌 ラストソング', 'https://movie.douban.com/subject/3536636/', '暂无评分', '杉田成道', '本木雅弘 / 吉岡秀隆 / 安田成美', null, '日本', '1994');
+INSERT INTO `movies` VALUES ('最爱是你 世界で一番君が好き!', 'https://movie.douban.com/subject/3222863/', '7.1', '光野道夫 / 中野昌宏 / 本間欧彦', '浅野温子 / 三上博史 / 工藤静香', null, '日本', '1990');
+INSERT INTO `movies` VALUES ('蔷薇海峡', 'https://movie.douban.com/subject/4202077/', '暂无评分', null, '宇津井健 / 浜美枝 / 神田正辉', null, '日本', '1978');
+INSERT INTO `movies` VALUES ('苏醒的金狼 蘇える金狼', 'https://movie.douban.com/subject/1997666/', '暂无评分', '本広克行 / 大谷太郎 / 佐藤東彌', '香取慎吾 / 石橋凌 / 上原多香子', null, '日本', '1999');
+INSERT INTO `movies` VALUES ('爱，难以成眠 愛よ、眠らないで', 'https://movie.douban.com/subject/3324105/', '暂无评分', '村上修', '大原麗子 / 中居正広 / 堂本光一', null, '日本', '1993');
+INSERT INTO `movies` VALUES ('秀逗男护士 ナースマン', 'https://movie.douban.com/subject/3141625/', '6.8', '岩本仁志', '松冈昌宏 / 安倍夏美 / 上原多香子', null, '日本', '2002');
+INSERT INTO `movies` VALUES ('月下棋士 月下の棋士', 'https://movie.douban.com/subject/3136390/', '6.7', '冢本边平 / 小松隆志', '森田刚 / 山口纱弥加 / 川岛直美', null, '日本', '2000');
+INSERT INTO `movies` VALUES ('给我们爱吧 Boku ra ni ai o!', 'https://movie.douban.com/subject/3160936/', '暂无评分', '中江功', '江口洋介 / 武田真治 / 铃木杏树', '喜剧 / 爱情', '日本', '1995');
+INSERT INTO `movies` VALUES ('爱与情欲 ラブとエロス', 'https://movie.douban.com/subject/3271318/', '7.0', '生野慈朗 / 戶高正啟 / 片山修', '浅野温子 / 长濑智也 / 宝生舞', null, '日本', '1998');
+INSERT INTO `movies` VALUES ('爱情打猎族 君が嘘をついた', 'https://movie.douban.com/subject/3222858/', '暂无评分', '楠田泰之', '三上博史 / 麻生祐未 / 工藤静香', null, '日本', '1988');
+INSERT INTO `movies` VALUES ('德克 ドク', 'https://movie.douban.com/subject/3330105/', '暂无评分', '木村達昭 / 武内英樹 / 二宮浩行', '安田成美 / 香取慎吾 / 島かおり', null, '日本', '1996');
+INSERT INTO `movies` VALUES ('艳姿！浪速光三郎七变化 艶姿！ナニワの光三郎七変化', 'https://movie.douban.com/subject/3190028/', '7.9', '瀧川治水', '堂本光一 / 西冈德马', null, '日本', '1997');
+INSERT INTO `movies` VALUES ('白影SP 白い影 SP', 'https://movie.douban.com/subject/5414915/', '8.5', '金子文纪', '中居正广 / 竹内结子', null, '日本', '2003');
+INSERT INTO `movies` VALUES ('红的冲击 赤い衝撃', 'https://movie.douban.com/subject/4310159/', '8.6', null, '山口百恵 / 三浦友和', '剧情', '日本', '1976');
+INSERT INTO `movies` VALUES ('回首又见他 特别篇 振り返れば奴がいる スペシャル 最後の戦い', 'https://movie.douban.com/subject/4111501/', '7.4', '若松節朗', '織田裕二 / 石黒賢 / 千堂あきほ', null, '日本', '1993');
+INSERT INTO `movies` VALUES ('摩登妈咪 ママハハ・ブギ', 'https://movie.douban.com/subject/2165297/', '7.9', '吉田秋生 / 山泉脩', '浅野温子 / 织田裕二', null, '日本', '1989');
+INSERT INTO `movies` VALUES ('高校三侠 予備校ブギ', 'https://movie.douban.com/subject/3087471/', '8.2', '远藤环', '绪形直人 / 的场浩司 / 织田裕二', null, '日本', '1990');
+INSERT INTO `movies` VALUES ('阿南的小情人 南くんの恋人', 'https://movie.douban.com/subject/2296032/', '7.5', '中山史郎 / 今井和久', '高桥由美子 / 武田真治 / 千叶丽子', null, '日本', '1994');
+INSERT INTO `movies` VALUES ('明天好天气 明日天気になあれ', 'https://movie.douban.com/subject/2333732/', '8.2', '岩本仁志 / 佐久间纪佳 / 猪股隆一', '观月亚理莎 / 井之原快彦 / 森迫永依', null, '日本', '2003');
+INSERT INTO `movies` VALUES ('霓裳梦想家 晴れ着、ここ一番', 'https://movie.douban.com/subject/3190050/', '8.1', '片冈敬司 / 藤泽浩一', '及川光博 / 濑户朝香 / 高桥英树', null, '日本', '2000');
+INSERT INTO `movies` VALUES ('甜蜜的季节 Sweet Season', 'https://movie.douban.com/subject/3178801/', '7.3', '福泽克雄 / 片山修 / 三城真一', '松岛菜菜子 / 椎名桔平', '爱情', '日本', '1998');
+INSERT INTO `movies` VALUES ('相逢何必曾相识 素晴らしきかな人生', 'https://movie.douban.com/subject/1998819/', '8.0', '光野道夫 / 杉山登', '浅野温子 / 織田裕二 / 佐藤浩市', null, '日本', '1993');
+INSERT INTO `movies` VALUES ('汉城生死恋 もう一度キス', 'https://movie.douban.com/subject/1998659/', '6.7', '星田良子', '窪塚洋介 / ユンソナ(尹孫河) / 国分佐智子', null, '日本', '2001');
+INSERT INTO `movies` VALUES ('廉价的爱 CHEAP LOVE', 'https://movie.douban.com/subject/2032807/', '7.6', null, '反町隆史 / 鶴田真由 / 沢村一樹', '爱情', '日本', '1999');
+INSERT INTO `movies` VALUES ('幸福的王子 幸福の王子', 'https://movie.douban.com/subject/1881254/', '6.7', '猪股隆一', '本木雅弘 / 菅野美穗 / 渡部笃郎', '剧情', '日本', '2003');
+INSERT INTO `movies` VALUES ('两个人一起走的路 ふたり 私たちが選んだ道', 'https://movie.douban.com/subject/1479109/', '7.1', '水桥文美江', '长濑智也 / 深田恭子 / 松浦亚弥', '爱情 / 家庭', '日本', '2003');
+INSERT INTO `movies` VALUES ('镰鼠之夜 かまいたちの夜', 'https://movie.douban.com/subject/2341885/', '6.2', '吉田秋生', '藤原龙也 / 内山理名', null, '日本', '2002');
+INSERT INTO `movies` VALUES ('献给阿尔吉侬的花束 アルジャーノンに花束を', 'https://movie.douban.com/subject/2299719/', '7.8', '新城毅彦 / 冢本连平', '中山裕介 / 菅野美穗 / 吉泽悠', null, '日本', '2002');
+INSERT INTO `movies` VALUES ('难得友情人 素颜のままで', 'https://movie.douban.com/subject/3150370/', '8.6', '光野道夫', '安田成美 / 中森明菜 / 的场浩司', '剧情', '日本', '1992');
+INSERT INTO `movies` VALUES ('手足情深 ブラザーズ', 'https://movie.douban.com/subject/2173106/', '8.4', '永山耕三 / 泽田鎌作', '中居正广 / 木村佳乃 / 原田芳雄', '剧情', '日本', '1998');
+INSERT INTO `movies` VALUES ('超级奶爸 人にやさしく', 'https://movie.douban.com/subject/1806478/', '7.7', '澤田鎌作', '香取慎吾 / 松岡充 / 加藤浩次', '剧情 / 喜剧 / 家庭', '日本', '2002');
+INSERT INTO `movies` VALUES ('迷宫 ラビリンス', 'https://movie.douban.com/subject/3003237/', '7.6', '雨宫望 / 仓田贵也 / 吉野洋', '渡部笃郎 / 樱井幸子 / 斋藤阳子', '悬疑', '日本', '1999');
+INSERT INTO `movies` VALUES ('一个好人 いいひと', 'https://movie.douban.com/subject/2032824/', '7.6', '星护', '草剪刚 / 财前直见 / 菅野美穗', '剧情', '日本', '1997');
+INSERT INTO `movies` VALUES ('鸢 とんび', 'https://movie.douban.com/subject/6844903/', '7.7', '梶原登城', '堤真一 / 小泉今日子 / 池松壮亮', '剧情', '日本', '2012');
+INSERT INTO `movies` VALUES ('末子长男姐三人 末っ子長男姉三人', 'https://movie.douban.com/subject/2173170/', '7.8', '清弘誠 / 金子文紀 / 高成麻亩子', '深津絵里 / 岡田准一 / 小雪', '爱情', '日本', '2003');
+INSERT INTO `movies` VALUES ('无间双龙：这份爱，才是正义 ウロボロス～この愛こそ、正義。', 'https://movie.douban.com/subject/25953663/', '8.3', '石井康晴', '生田斗真 / 小栗旬 / 上野树里', '剧情', '日本', '2015');
+INSERT INTO `movies` VALUES ('造花之蜜 造花の蜜', 'https://movie.douban.com/subject/6852356/', '6.3', '小林义则', '檀丽 / 玉山铁二 / 国仲凉子', '悬疑', '日本', '2011');
+INSERT INTO `movies` VALUES ('笑颜的法则 笑顔の法則', 'https://movie.douban.com/subject/2274942/', '7.7', '伊佐野英树', '竹内结子 / 阿部寛', null, '日本', '2003');
+INSERT INTO `movies` VALUES ('川流入海 6个爱的物语 川、いつか海へ ６つの愛の物語', 'https://movie.douban.com/subject/2274941/', '7.8', '黛りんたろう / 清水一彦 / 堀切園健太郎', '深津絵里 / 志田未来 / 中山裕介', '剧情', '日本', '2003');
+INSERT INTO `movies` VALUES ('危险关系 危険な関係', 'https://movie.douban.com/subject/1441095/', '7.5', '中江功', '藤原纪香 / 丰川悦司', '剧情', '日本', '1999');
+INSERT INTO `movies` VALUES ('麻辣女教师 ナオミ', 'https://movie.douban.com/subject/2297672/', '7.0', '土方政人 / 平野真 / 西谷弘', '藤原纪香 / 佐藤蓝子 / 凉', '剧情 / 喜剧', '日本', '1999');
+INSERT INTO `movies` VALUES ('爱的和弦 ハルモニア この爱の涯て', 'https://movie.douban.com/subject/2276935/', '7.8', '堤 幸彦 / 仓田真也', '堂本光一 / 中谷美纪', null, '日本', '1998');
+INSERT INTO `movies` VALUES ('浅草福丸旅馆 浅草福丸旅館', 'https://movie.douban.com/subject/2017954/', '7.9', '脇田时三 / 村田忍 / 猪原达三', '西田敏行 / 贺来千香子 / 大冢ちひろ', '剧情', '日本', '2007');
+INSERT INTO `movies` VALUES ('父子刑警 ビター・ブラッド', 'https://movie.douban.com/subject/25820642/', '7.8', '金井紘 / 谷村政樹', '佐藤健 / 渡部笃郎 / 忽那汐里', '剧情 / 悬疑', '日本', '2014');
+INSERT INTO `movies` VALUES ('厨艺小天王 味いちもんめ', 'https://movie.douban.com/subject/2382422/', '8.0', '齊藤郁宏', '中居正广 / 田中律子 / 布施博', '剧情', '日本', '1995');
+INSERT INTO `movies` VALUES ('女人与男人的热带 女と男の熱帯', 'https://movie.douban.com/subject/20431535/', '5.9', '生野慈朗 / 井坂聡 / 村上牧人', '藤原纪香 / 渡部笃郎 / 永山绚斗', null, '日本', '2013');
+INSERT INTO `movies` VALUES ('新星之金币 新・星の金貨', 'https://movie.douban.com/subject/2136731/', '8.3', '佐藤敦 / 西宪彦', '星野真里 / 藤原龙也 / 吉泽悠', null, '日本', '2001');
+INSERT INTO `movies` VALUES ('情定大饭店 ホテリアー', 'https://movie.douban.com/subject/2056865/', '6.3', '木下高男 / 土方政人 / 北川学', '上户彩 / 田边诚一 / 及川光博', '爱情', '日本', '2007');
+INSERT INTO `movies` VALUES ('菜鸟警探 ルーキー', 'https://movie.douban.com/subject/2277407/', '7.3', '冢本连平', '堂本光一 / 内山理名 / 笕利夫', null, '日本', '2001');
+INSERT INTO `movies` VALUES ('恋爱故事 Love Story', 'https://movie.douban.com/subject/1948808/', '7.9', '生野慈朗 / 土井裕泰 / 今井夏木', '丰川悦司 / 中山美穗', '喜剧 / 爱情', '日本', '2001');
+INSERT INTO `movies` VALUES ('银狼怪奇事件簿 銀狼怪奇ファイル', 'https://movie.douban.com/subject/1999633/', '7.5', '佐藤東彌 / 保母浩章 / 井上健', '堂本光一 / 寶生舞 / 蟹江敬三', null, '日本', '1996');
+INSERT INTO `movies` VALUES ('共犯者', 'https://movie.douban.com/subject/3036621/', '7.7', '大谷太郎', '浅野温子 / 三上博史 / 池內博之', null, '日本', '2003');
+INSERT INTO `movies` VALUES ('繼母庸人妙管家 あきまへんで!', 'https://movie.douban.com/subject/1998363/', '7.4', '福泽克雄 / 清弘诚', '中村玉绪 / 内田有纪 / 藤原纪香', null, '日本', '1998');
+INSERT INTO `movies` VALUES ('拭去泪水 涙をふいて', 'https://movie.douban.com/subject/2032862/', '7.7', '永山耕三 / 中江功 / 平井秀樹', '江口洋介 / 二宫和也 / 内田有纪', '剧情', '日本', '2000');
+INSERT INTO `movies` VALUES ('女婿大人2003 ムコ殿2003', 'https://movie.douban.com/subject/3120902/', '7.4', '西浦正记 / 久保田哲史', '长濑智也 / 酒井法子 / 筱原凉子', null, '日本', '2003');
+INSERT INTO `movies` VALUES ('源氏物语 源氏物語', 'https://movie.douban.com/subject/3098560/', '7.8', '桥田寿贺子 / TBS', '东山纪之 / 大原丽子 / 片冈孝夫', null, '日本', '1991');
+INSERT INTO `movies` VALUES ('白色巨塔 白い巨塔', 'https://movie.douban.com/subject/2156806/', '8.4', '山本萨夫', '田宫二郎 / 东野英治郎 / 田村高广', '剧情', '日本', '1966');
+INSERT INTO `movies` VALUES ('天使消失的街道 天使が消えた街', 'https://movie.douban.com/subject/2272318/', '7.9', '雨宫望,古贺伦明,荻野哲', '堂本光一 / 藤井フミヤ / 内田有纪', null, '日本', '2000');
+INSERT INTO `movies` VALUES ('向黑杰克问好 ブラックジャックによろしく', 'https://movie.douban.com/subject/2173173/', '7.3', '平野俊一 / 三城真一 / 山室大辅', '妻夫木聪 / 铃木京香 / 加藤浩次', null, '日本', '2003');
+INSERT INTO `movies` VALUES ('热烈的中华饭店 熱烈的中華飯店', 'https://movie.douban.com/subject/1997635/', '6.9', '鈴木雅之 / 木村達昭 / 成田岳', '鈴木京香 / 二宮和也 / 椎名桔平', '剧情 / 喜剧', '日本', '2003');
+INSERT INTO `movies` VALUES ('心灵感应 サトラレ', 'https://movie.douban.com/subject/2295774/', '8.4', '高丸雅隆 / 冢本连平 / 田村直已', '鹤田真由 / 小田切让 / 小池荣子', null, '日本', '2002');
+INSERT INTO `movies` VALUES ('NO.1男公关 ナンバーワン', 'https://movie.douban.com/subject/2161021/', '6.4', '中岛悟', '洼冢洋介 / 中山裕介 / 冈本绫', '喜剧 / 爱情', '日本', '2001');
+INSERT INTO `movies` VALUES ('少年は鳥になった', 'https://movie.douban.com/subject/2154746/', '7.3', '长岛价纪', '山下智久 / 高冈早纪 / 津川雅彦', null, '日本', '2001');
+INSERT INTO `movies` VALUES ('东京电梯小姐 東京エレベーターガール', 'https://movie.douban.com/subject/2257206/', '7.4', '佐野史郎', '宫泽理惠 / 赤井英和 / 东干久', '剧情 / 爱情', '日本', '1992');
+INSERT INTO `movies` VALUES ('爱的魔法使 ぼくの魔法使い', 'https://movie.douban.com/subject/1906772/', '7.6', '水田伸生 / 编剧：宫藤官九郎', '伊藤英明 / 筱原凉子 / 古田新太', '喜剧', '日本', '2003');
+INSERT INTO `movies` VALUES ('P.S. 我很好，俊平。 P.S.元気です、俊平', 'https://movie.douban.com/subject/1997783/', '7.3', '吉田健 / 森山享', '堂本光一 / 濑户朝香 / 樱井淳子', null, '日本', '1999');
+INSERT INTO `movies` VALUES ('青春无悔 若者のすべて', 'https://movie.douban.com/subject/1846052/', '7.8', '中江功 / 木村達昭', '萩原聖人 / 木村拓哉 / 鈴木杏樹', null, '日本', '1994');
+INSERT INTO `movies` VALUES ('热血教师 ガッコの先生', 'https://movie.douban.com/subject/2173166/', '8.3', '今井夏木 / 平野俊一 / 尾原纪尚', '堂本刚 / 竹内结子 / 田中直树', null, '日本', '2001');
+INSERT INTO `movies` VALUES ('世界奇妙物语 05秋之特別篇 世にも奇妙な物語 \'05秋の特別編', 'https://movie.douban.com/subject/2281649/', '8.0', '都築淳一 / 佐藤祐市 / 土方政人 / 植田泰史 / 星护', '坂口宪二 / 山田优 / 松田圣子', '剧情 / 悬疑 / 惊悚', '日本', '2005');
+INSERT INTO `movies` VALUES ('金田一少年事件簿2 金田一少年の事件簿 第2シリーズ', 'https://movie.douban.com/subject/4067362/', '9.2', '堤幸彦 / 佐藤东弥', '堂本刚 / 友坂理惠 / 古尾谷雅人', '犯罪 / 悬疑 / 惊悚 / 恐怖', '日本', '1996');
+INSERT INTO `movies` VALUES ('美味关系 おいしい関係', 'https://movie.douban.com/subject/1997742/', '7.6', '中江功 / 河毛俊作', '中山美穗 / 唐沢寿明 / 飯島直子', '剧情', '日本', '1996');
+INSERT INTO `movies` VALUES ('警犬卡尔 刑事犬カール', 'https://movie.douban.com/subject/2217295/', '8.4', '日高武治', '木之内绿 / 宮脇康之 / 神山繁', '剧情', '日本', '1977');
+INSERT INTO `movies` VALUES ('SP 要人警护官 野望篇 SP 野望篇', 'https://movie.douban.com/subject/3033970/', '7.3', '波多野貴文', '冈田准一 / 真木阳子 / 堤真一', '剧情', '日本', '2010');
+INSERT INTO `movies` VALUES ('临场 臨場', 'https://movie.douban.com/subject/3543741/', '7.6', '桥本一', '内野圣阳 / 松下由树 / 高岛政伸', null, '日本', '2009');
+INSERT INTO `movies` VALUES ('给父亲的口信 トキオ 父への伝言', 'https://movie.douban.com/subject/3041911/', '8.3', '星田良子', '国分太一 / 櫻井翔 / 富田靖子', '剧情', '日本', '2004');
+INSERT INTO `movies` VALUES ('与光同行 光とともに…～自閉症児を抱えて～', 'https://movie.douban.com/subject/2173129/', '8.8', '佐藤东弥 / 佐久间纪佳', '篠原涼子 / 小林聪美 / 山口达也', '剧情 / 儿童 / 家庭', '日本', '2004');
+INSERT INTO `movies` VALUES ('世界奇妙物语 2000春之特别篇 世にも奇妙な物語 00春の特別編', 'https://movie.douban.com/subject/2281658/', '8.0', '村上正典 / 西谷弘 / 杉本达 / 丰川悦司 / 落合正幸', '草剪刚 / 小日向文世 / 柳叶敏郎', null, '日本', '2000');
+INSERT INTO `movies` VALUES ('罗密欧与朱丽叶~交错 ロミオとジュリエット ～すれちがい～', 'https://movie.douban.com/subject/2287737/', '6.4', '大谷太郎', '泷泽秀明 / 长泽雅美 / 竹中直人', null, '日本', '2007');
+INSERT INTO `movies` VALUES ('快递高手 ギフト', 'https://movie.douban.com/subject/2333693/', '8.6', '河毛俊作', '木村拓哉 / 室井滋 / 篠原凉子', null, '日本', '1997');
+INSERT INTO `movies` VALUES ('民俗学者八云树 ミステリー民俗学者 八雲樹', 'https://movie.douban.com/subject/2279704/', '7.1', '麻生学 / 唐木希浩 / 木村尚 / 常广丈太', '及川光博 / 平山绫 / 伊藤裕子', '喜剧 / 悬疑', '日本', '2004');
+INSERT INTO `movies` VALUES ('本家新娘 本家のヨメ', 'https://movie.douban.com/subject/2263258/', '7.8', '藤井裕也 / 国本雅広 / 冈本浩一', '岩下志麻 / 徐若瑄 / 田中健', '爱情', '日本', '2001');
+INSERT INTO `movies` VALUES ('协奏曲 協奏曲', 'https://movie.douban.com/subject/2282425/', '7.5', '清弘诚 / 竹之下宽次', '木村拓哉 / 田村正和 / 宫泽理惠', null, '日本', '1996');
+INSERT INTO `movies` VALUES ('日本恐怖童话六部曲 怖い童話', 'https://movie.douban.com/subject/1998618/', '6.5', '吉田秋生 / 福泽克雄 / 石井康晴 / 今井夏木 / 金子文纪', '内山理名 / 小雪 / 有栖川司', '恐怖', '日本', '1999');
+INSERT INTO `movies` VALUES ('安藤奈津 あんどーなつ', 'https://movie.douban.com/subject/3196670/', '7.7', '酒井聖博 / 堀英樹 / 竹村健太郎', '貫地谷しほり / 國村隼', '剧情', '日本', '2008');
+INSERT INTO `movies` VALUES ('寿司王子 スシ王子！', 'https://movie.douban.com/subject/2142551/', '6.5', '堤幸彦', '堂本光一 / 中丸雄一 / 加藤夏希', '剧情', '日本', '2007');
+INSERT INTO `movies` VALUES ('花样男子 花より男子', 'https://movie.douban.com/subject/2059500/', '6.5', '楠田泰之', '内田有纪 / 藤木直人 / 谷原章介', '爱情', '日本', '1995');
+INSERT INTO `movies` VALUES ('葵 德川三代 葵 徳川三代', 'https://movie.douban.com/subject/2272240/', '9.2', '重光亨彦', '津川雅彦 / 西田敏行 / 尾上辰之助', '历史 / 战争', '日本', '2000');
+INSERT INTO `movies` VALUES ('二千年之恋 二千年の恋', 'https://movie.douban.com/subject/1938451/', '7.2', '河毛俊作 / 泽田镰作 / 中江功 / 西浦匡规', '中山美穗 / 金城武 / 宫泽和史', null, '日本', '2000');
+INSERT INTO `movies` VALUES ('第二处女 セカンド・バージン', 'https://movie.douban.com/subject/4925424/', '7.0', '黒崎博 / 柳川強', '铃木京香 / 长谷川博己 / 深田恭子', '爱情', '日本', '2010');
+INSERT INTO `movies` VALUES ('救命病栋24小时 第4季 救命病棟24時 第4シリーズ', 'https://movie.douban.com/subject/3767364/', '7.6', '河毛俊作 / 佐藤祐市 / 水田成英 / 大木绫子', '江口洋介 / 松岛菜菜子 / 木村多江', '剧情', '日本', '2009');
+INSERT INTO `movies` VALUES ('杀戮都市SP Another Gantz', 'https://movie.douban.com/subject/6129701/', '7.0', '佐藤信介', '二宮和也 / 松山ケンイチ / 加藤晴彦', '科幻', '日本', '2011');
+INSERT INTO `movies` VALUES ('白昼之月 真昼の月', 'https://movie.douban.com/subject/1639380/', '7.3', '土井裕泰 / 加藤浩丈', '织田裕二 / 常盘贵子 / 内藤刚志', '爱情', '日本', '1996');
+INSERT INTO `movies` VALUES ('颜', 'https://movie.douban.com/subject/1794084/', '7.3', '土方政人 / 松田秀知 / 都築淳一', '仲间由纪惠 / 小田切让 / 京野琴美', '剧情', '日本', '2003');
+INSERT INTO `movies` VALUES ('横山秀夫悬疑剧 横山秀夫サスペンス', 'https://movie.douban.com/subject/4718368/', '7.5', '铃木浩介 / 水谷俊之 / 榎戸耕史', '仲村亨 / 岸谷五朗 / 玉山铁二', '悬疑', '日本', '2010');
+INSERT INTO `movies` VALUES ('情热大陆 情熱大陸', 'https://movie.douban.com/subject/6957237/', '9.1', null, '久保田仁志 / 太田光 / 田中裕二', '纪录片', '日本', '1998');
+INSERT INTO `movies` VALUES ('暗恋 to Heart 恋して死にたい', 'https://movie.douban.com/subject/1998318/', '8.1', '松原浩 / 远藤环 / 那须田淳', '堂本刚 / 深田恭子 / 原沙知绘', '爱情', '日本', '1999');
+INSERT INTO `movies` VALUES ('四谎记 四つの嘘', 'https://movie.douban.com/subject/3197501/', '7.8', '松田秀知 / 藤田明二 / 土方政人', '永作博美 / 寺島しのぶ / 羽田美智子', '剧情', '日本', '2008');
+INSERT INTO `movies` VALUES ('火车 火車', 'https://movie.douban.com/subject/6732874/', '6.9', '桥本一', '上川隆也 / 佐佐木希 / 寺胁康文', '悬疑', '日本', '2011');
+INSERT INTO `movies` VALUES ('怪物小王子 怪物くん', 'https://movie.douban.com/subject/4293162/', '7.4', '中岛悟', '大野智 / 鹿贺丈史 / 八岛智人', '喜剧', '日本', '2010');
+INSERT INTO `movies` VALUES ('世界奇妙物语 01秋之特别篇 世にも奇妙な物語 \'01秋の特別編', 'https://movie.douban.com/subject/2271657/', '8.2', '土方政人 / 星护 / 落合正幸 / 西谷弘 / 中岛哲也', '优香 / 石黑贤 / 中谷美纪', null, '日本', '2001');
+INSERT INTO `movies` VALUES ('坏人们 わるいやつら', 'https://movie.douban.com/subject/2032937/', '7.7', '松田秀知', '米仓凉子 / 上川隆也 / 北村一辉', '犯罪 / 悬疑', '日本', '2007');
+INSERT INTO `movies` VALUES ('爷爷25岁 おじいちゃんは25歳', 'https://movie.douban.com/subject/5308231/', '8.1', '田中诚', '藤原龙也 / 大东骏介 / 仓科加奈', '家庭', '日本', '2010');
+INSERT INTO `movies` VALUES ('百年物语 百年の物語', 'https://movie.douban.com/subject/1759781/', '8.1', '井下靖央 / 竹之下寬次 / 土井裕泰', '松岛菜菜子 / 北野武 / 渡部笃郎', '剧情 / 爱情', '日本', '2000');
+INSERT INTO `movies` VALUES ('义经 義経', 'https://movie.douban.com/subject/1763310/', '8.0', '黛りんたろう / 木村隆文 / 柳川強 / 一木正恵', '泷泽秀明 / 石原里美 / 伊藤淳史', '动作 / 传记 / 剧情 / 历史 / 爱情 / 战争', '日本', '2005');
+INSERT INTO `movies` VALUES ('青春男孩 っポイ!', 'https://movie.douban.com/subject/2296648/', '7.7', '猪俣隆一 / 大根仁', '山下智久 / 相叶雅纪 / 吹石一惠', '剧情', '日本', '1999');
+INSERT INTO `movies` VALUES ('世界奇妙物语 04秋之特别篇 世にも奇妙な物語 \'04秋の特別編', 'https://movie.douban.com/subject/4300609/', '8.1', '君塚良一 / 都築淳一 / 植田泰史 / 福本義人 / 土方政人', '筱原凉子 / 濑户朝香 / 津川雅彦', null, '日本', '2004');
+INSERT INTO `movies` VALUES ('同窗会 同窓会', 'https://movie.douban.com/subject/1780029/', '8.2', '細野英延 / 五木田亮一', '齐藤由贵 / 田中美奈子 / 西村和彦', '剧情 / 同性', '日本', '1993');
+INSERT INTO `movies` VALUES ('MW毒气风暴：恶魔的游戏 MW-ムウ：悪魔のゲーム', 'https://movie.douban.com/subject/3736757/', '6.7', '岩本仁志', '佐藤健 / 谷村美月 / 小出惠介', '剧情 / 悬疑 / 冒险', '日本', '2009');
+INSERT INTO `movies` VALUES ('虎与龙SP タイガー＆ドラゴンSP 「三枚起請の回」', 'https://movie.douban.com/subject/3118848/', '9.2', '金子文纪 / 片山修 / 坪井敏雄', '长濑智也 / 冈田准一 / 伊东美咲', '剧情 / 喜剧', '日本', '2005');
+INSERT INTO `movies` VALUES ('坐着轮椅飞上天空 車イスで僕は空を飛ぶ', 'https://movie.douban.com/subject/10759862/', '7.8', '佐久间纪佳', '二宮和也 / 上戸彩 / 池松壮亮', '剧情', '日本', '2012');
+INSERT INTO `movies` VALUES ('马拉松 マラソン', 'https://movie.douban.com/subject/2085537/', '8.7', '吉田健 Takeshi Yoshida', '二宫和也 / 松冈昌宏 / 田中美佐子', '剧情', '日本', '2007');
+INSERT INTO `movies` VALUES ('如果能在天堂和你相遇 天国で君に逢えたら', 'https://movie.douban.com/subject/3660856/', '7.7', '土井裕泰', '二宮和也 / 井上真央 / ゴリ', '剧情', '日本', '2009');
+INSERT INTO `movies` VALUES ('大奥第一章特别篇 樱花落 大奥~第一章~桜散る', 'https://movie.douban.com/subject/2340791/', '8.1', '林徹 / 武内英树', '木村多江 / 濑户朝香 / 西岛秀俊', '剧情 / 爱情 / 古装', '日本', '2005');
+INSERT INTO `movies` VALUES ('世界奇妙物语 SMAP特別篇 世にも奇妙な物語 SMAPの特別編', 'https://movie.douban.com/subject/2281647/', '8.2', '星护 / 落合正幸 / 石井克人 / 佐藤嗣麻子 / 河毛俊作', '香取慎吾 / 草剪刚 / 木村拓哉', null, '日本', '2001');
+INSERT INTO `movies` VALUES ('血疑 赤い疑惑', 'https://movie.douban.com/subject/2063540/', '8.5', '瀬川昌治 / 国原俊明 / 降旗康男', '山口百惠 / 三浦友和 / 宇津井健', '剧情 / 爱情', '日本', '1975');
+INSERT INTO `movies` VALUES ('池袋西口公园SP--SOUP篇 池袋ウエストゲートパークスープの回', 'https://movie.douban.com/subject/3113596/', '7.7', '堤幸彦', '长濑智也 / 加藤爱 / 妻夫木聪', '剧情 / 犯罪 / 悬疑', '日本', '2003');
+INSERT INTO `movies` VALUES ('世界奇妙物语 世にも奇妙な物語', 'https://movie.douban.com/subject/2281691/', '9.2', '雨宫庆太 / 一濑隆重', '织田裕二 / 中山美穗 / 国生小百合', '剧情 / 喜剧 / 悬疑 / 奇幻 / 惊悚 / 冒险 / 恐怖', '日本', '1990');
+INSERT INTO `movies` VALUES ('女系家族', 'https://movie.douban.com/subject/1958091/', '7.6', '酒井圣博 / 竹村謙太郎 / 伊藤壽浩', '米仓凉子 / 高岛礼子 / 濑户朝香', '剧情 / 悬疑', '日本', '2005');
+INSERT INTO `movies` VALUES ('圈套 特别篇 TRICK新作スペシャル', 'https://movie.douban.com/subject/2892616/', '8.2', '堤幸彦', '仲间由纪惠 / 阿部宽 / 生濑胜久', '喜剧 / 悬疑 / 犯罪', '日本', '2005');
+INSERT INTO `movies` VALUES ('永远的孩子 永遠の仔', 'https://movie.douban.com/subject/1862935/', '8.8', '鶴橋康夫 / 花堂純次 / 白川士', '中谷美纪 / 渡部笃郎 / 椎名桔平', '剧情', '日本', '2000');
+INSERT INTO `movies` VALUES ('被迫归来的33分钟侦探 帰ってこさせられた 33分探偵', 'https://movie.douban.com/subject/3546152/', '8.2', '福田雄一 / 成田岳', '堂本刚 / 水川麻美 / 野波麻帆', '剧情 / 悬疑 / 犯罪', '日本', '2009');
+INSERT INTO `movies` VALUES ('世界奇妙物语 05春之特别篇 世にも奇妙な物語 \'05春の特別編', 'https://movie.douban.com/subject/2124449/', '8.3', '笕昌也 / 植田泰史 / 木下高男 / 都築淳一', '中山裕介 / 井上和香 / 小西真奈美', '剧情', '日本', '2005');
+INSERT INTO `movies` VALUES ('天地人', 'https://movie.douban.com/subject/2131160/', '7.5', '片岡敬司', '妻夫木聪 / 北村一辉 / 城田优', '剧情', '日本', '2009');
+INSERT INTO `movies` VALUES ('同一屋檐下2 ひとつ屋根の下2', 'https://movie.douban.com/subject/1465787/', '8.4', '永山耕三 / 武内英树 / 高丸雅隆', '江口洋介 / 福山雅治 / 山本圭', '剧情 / 爱情 / 家庭', '日本', '1997');
+INSERT INTO `movies` VALUES ('黑色皮革手册：白暗 黒革の手帖スペシャル〜白い闇', 'https://movie.douban.com/subject/2025160/', '7.6', '松田秀知', '米仓凉子 / 丰原功补 / 冈本健一', '剧情 / 悬疑', '日本', '2005');
+INSERT INTO `movies` VALUES ('世界奇妙物语 21世纪第21年的特别篇 世にも奇妙な物語21世紀21年目の特別編', 'https://movie.douban.com/subject/6396709/', '6.6', '河毛俊作 / 石川淳一 / 笕昌也 / 都築淳一 / 佐藤源太', '大森南朋 / 杏 / 坂口宪二', '剧情 / 悬疑 / 奇幻', '日本', '2011');
+INSERT INTO `movies` VALUES ('自闭天才 ATARU', 'https://movie.douban.com/subject/10465128/', '7.4', '木村ひさし / 吉田健 / 韓哲', '中居正广 / 北村一辉 / 栗山千明', '剧情 / 犯罪', '日本', '2012');
+INSERT INTO `movies` VALUES ('世界奇妙物语 2013年秋之特别篇 世にも奇妙な物語 \'13秋の特別編', 'https://movie.douban.com/subject/25711527/', '6.7', '石井克人 / 植田泰史 / 元村次宏 / 松木創', '夏菜 / 香取慎吾 / 志贺广太郎', '剧情 / 悬疑', '日本', '2013');
+INSERT INTO `movies` VALUES ('野兽之道 松本清張 けものみち', 'https://movie.douban.com/subject/2030892/', '8.3', '松田秀知 / 藤田明二', '米仓凉子 / 仲村亨 / 若村麻由美', '剧情', '日本', '2006');
+INSERT INTO `movies` VALUES ('世界奇妙物语 2007春之特别篇 世にも奇妙な物語 2007春の特別編', 'https://movie.douban.com/subject/2272257/', '7.9', '植田泰史 / 长江俊和 / 土方政人 / 佐藤源太 / 星护', '樱井翔 / 山口纱弥加 / 小日向文世', '剧情 / 悬疑 / 奇幻', '日本', '2007');
+INSERT INTO `movies` VALUES ('临死！！江古田 臨死!! 江古田ちゃん', 'https://movie.douban.com/subject/5446195/', '8.2', '福田豊', '鸟居美雪 / 江本純子 / 长谷川朝晴', '喜剧', '日本', '2011');
+INSERT INTO `movies` VALUES ('不毛地带 不毛地帯', 'https://movie.douban.com/subject/3728516/', '8.5', '泽田镰作 / 平野真 / 水田成英', '唐泽寿明 / 和久井映见 / 段田安则', '剧情', '日本', '2009');
+INSERT INTO `movies` VALUES ('13岁的Hello Work 13歳のハローワーク', 'https://movie.douban.com/subject/7055666/', '7.9', '高桥伸之 / 塚本连平 / 梶山贵弘', '松冈昌宏 / 横山裕 / 桐谷美玲', '剧情 / 科幻', '日本', '2012');
+INSERT INTO `movies` VALUES ('再也不诱拐了 もう誘拐なんてしない', 'https://movie.douban.com/subject/6973370/', '6.9', '佐藤祐市', '大野智 / 新垣结衣 / 佐藤隆太', '剧情', '日本', '2012');
+INSERT INTO `movies` VALUES ('通向婚纱之路 バージンロード', 'https://movie.douban.com/subject/1464841/', '8.4', '光野道夫 / 木村达昭', '反町隆史 / 和久井映见 / 武田铁矢', '剧情 / 爱情', '日本', '1997');
+INSERT INTO `movies` VALUES ('世界奇妙物语 2007秋之特别篇 世にも奇妙な物語 2007秋の特別編', 'https://movie.douban.com/subject/2272208/', '8.1', '松木創 / 城宝秀則 / 加藤公平 / 岩田和行 / 村谷嘉則', '石原里美 / 阿部隆史 / 城岛茂', '剧情', '日本', '2007');
+INSERT INTO `movies` VALUES ('胜者即是正义 リーガル・ハイ', 'https://movie.douban.com/subject/10491666/', '9.3', '石川淳一 / 城宝秀则', '堺雅人 / 新垣结衣 / 生濑胜久', '剧情 / 喜剧 / 犯罪', '日本', '2012');
+INSERT INTO `movies` VALUES ('胜者即是正义2 リーガルハイ2', 'https://movie.douban.com/subject/23997724/', '9.2', '石川淳一 / 城宝秀则 / 西坂瑞城', '堺雅人 / 新垣结衣 / 冈田将生', '喜剧 / 悬疑 / 犯罪', '日本', '2013');
+INSERT INTO `movies` VALUES ('胜者即是正义 2014SP リーガルハイ・スペシャル', 'https://movie.douban.com/subject/26020814/', '8.4', '石川淳一', '堺雅人 / 新垣结衣 / 生濑胜久', '剧情 / 悬疑', '日本', '2014');
+INSERT INTO `movies` VALUES ('胜者即是正义SP リーガル・ハイSP', 'https://movie.douban.com/subject/21332518/', '8.9', '石川淳一', '堺雅人 / 新垣结衣 / 生濑胜久', '剧情 / 喜剧', '日本', '2013');
+INSERT INTO `movies` VALUES ('半泽直树 半沢直樹', 'https://movie.douban.com/subject/24697949/', '9.1', '福泽克雄 / 棚泽孝义 / 田中健太', '堺雅人 / 上户彩 / 香川照之', '剧情', '日本', '2013');
+INSERT INTO `movies` VALUES ('第二爱情 セカンド・ラブ', 'https://movie.douban.com/subject/26269549/', '6.5', '塚原あゆ子', '龟梨和也 / 深田恭子 / 早见明里', '爱情', '日本', '2015');
+INSERT INTO `movies` VALUES ('徒步7分 徒歩7分', 'https://movie.douban.com/subject/25980211/', '8.1', '中島由貴', '田中丽奈 / 田中圭 / 福士诚治', '剧情', '日本', '2015');
+INSERT INTO `movies` VALUES ('天才侦探御手洗：难解事件档案之折伞的女人 天才探偵ミタライ～難解事件ファイル「傘を折る女」～', 'https://movie.douban.com/subject/26311827/', '6.2', '小林義則', '玉木宏 / 堂本光一 / 胜村政信', '犯罪 / 悬疑', '日本', '2015');
+INSERT INTO `movies` VALUES ('欢迎来我家 ようこそ、わが家へ', 'https://movie.douban.com/subject/26317175/', '7.5', '中江功', '相叶雅纪 / 泽尻英龙华 / 有村架纯', '剧情', '日本', '2015');
+INSERT INTO `movies` VALUES ('爸爸回来了 パパ帰る’96', 'https://movie.douban.com/subject/3190027/', '暂无评分', null, '堂本光一', null, '日本', '1996');
+INSERT INTO `movies` VALUES ('Dr.伦太郎 Dr.倫太郎', 'https://movie.douban.com/subject/26314383/', '7.6', '水田伸生', '堺雅人 / 苍井优 / 吉濑美智子', '剧情', '日本', '2015');
+INSERT INTO `movies` VALUES ('BORDER', 'https://movie.douban.com/subject/25823110/', '8.5', '桥本一 / 波多野贵文', '小栗旬 / 青木崇高 / 波瑠', '剧情 / 动作 / 犯罪', '日本', '2014');
+INSERT INTO `movies` VALUES ('上课小动作 となりの関くん', 'https://movie.douban.com/subject/23229638/', '8.5', 'ムトウユージ', '下野紘 / 花澤香菜', '剧情 / 动画', '日本', '2014');
+INSERT INTO `movies` VALUES ('欢迎来到阴阳屋 よろず占い処 陰陽屋へようこそ', 'https://movie.douban.com/subject/24876428/', '7.6', '土方政人 / 植田泰史', '锦户亮 / 仓科加奈 / 知念侑李', '剧情 / 喜剧', '日本', '2013');
+INSERT INTO `movies` VALUES ('孤独的美食家 第一季 孤独のグルメ Season1', 'https://movie.douban.com/subject/7065168/', '8.8', '溝口憲司 / 宝来忠昭', '松重丰 / 山村美智 / 宮内順子', '剧情', '日本', '2012');
+INSERT INTO `movies` VALUES ('孤独的美食家 第四季 孤独のグルメ Season4', 'https://movie.douban.com/subject/25890096/', '9.2', '沟口宪司 / 井川尊史', '松重豊', '剧情', '日本', '2014');
+INSERT INTO `movies` VALUES ('孤独的美食家 第二季 孤独のグルメ Season2', 'https://movie.douban.com/subject/11636402/', '9.1', '溝口憲司 / 宝来忠昭', '松重丰 / 齐藤晓 / おぼんこぼん', '剧情 / 喜剧', '日本', '2012');
+INSERT INTO `movies` VALUES ('孤独的美食家 第三季 孤独のグルメ Season3', 'https://movie.douban.com/subject/24700696/', '9.1', '溝口憲司 / 井川尊史 / 宝来忠昭', '松重丰', '剧情', '日本', '2013');
+INSERT INTO `movies` VALUES ('走马灯株式会社 走馬灯株式会社', 'https://movie.douban.com/subject/10796595/', '7.3', '三木康一郎 / 宮下健作 / 筧昌也', '香椎由宇 / 洼田正孝 / 尾原光', '剧情 / 悬疑 / 奇幻', '日本', '2012');
+INSERT INTO `movies` VALUES ('REPLAY & DESTROY', 'https://movie.douban.com/subject/26329066/', '8.6', '飯塚健', '山田孝之 / 林遣都 / 阿部进之介', '剧情 / 喜剧', '日本', '2015');
+INSERT INTO `movies` VALUES ('藤原龙也的一回道 藤原竜也の一回道', 'https://movie.douban.com/subject/26317231/', '9.2', null, '藤原龙也', '纪录片 / 真人秀', '日本', '2014');
+INSERT INTO `movies` VALUES ('烟霞 煙霞-Gold Rush-', 'https://movie.douban.com/subject/26377670/', '8.2', '小林圣太郎', '森山未来 / 高畑充希 / 中村友理', '剧情 / 悬疑', '日本', '2015');
+INSERT INTO `movies` VALUES ('熱血醫生 The Doctor', 'https://movie.douban.com/subject/1998524/', '暂无评分', '森田光則 / 山田高道 / 根本實樹 / 倉貫健二郎', '堤真一 / 長嶋一茂 / 葉月里緒菜', null, '日本', '1999');
+INSERT INTO `movies` VALUES ('怪物 MONSTER', 'https://movie.douban.com/subject/1427980/', '9.2', '小岛正幸', '木内秀信 / 能登麻美子 / 佐佐木望', '动画 / 剧情 / 悬疑 / 惊悚', '日本', '2004');
+INSERT INTO `movies` VALUES ('埃及艳后般的女人们 クレオパトラな女たち', 'https://movie.douban.com/subject/10514804/', '6.7', '岩本仁志 / 猪股隆一', '佐藤隆太 / 稻森泉 / 北乃绮', null, '日本', '2012');
+INSERT INTO `movies` VALUES ('本棚食堂', 'https://movie.douban.com/subject/26415252/', '7.1', '宝来忠昭 / 井川尊史', '中村苍 / 柄本时生 / 山下莉绪', null, '日本', '2015');
+INSERT INTO `movies` VALUES ('本棚食堂特别篇', 'https://movie.douban.com/subject/25921779/', '7.3', '宝来忠昭 / 井川尊史', '中村蒼 / 柄本時生', '喜剧', '日本', '2014');
+INSERT INTO `movies` VALUES ('青色火焰 アオイホノオ', 'https://movie.douban.com/subject/25879504/', '8.5', '福田雄一', '柳乐优弥 / 山本美月 / 安田显', '剧情 / 喜剧', '日本', '2014');
+INSERT INTO `movies` VALUES ('变身 変身', 'https://movie.douban.com/subject/25856352/', '7.2', '永田琴', '神木隆之介 / 二阶堂富美 / 臼田麻美', '剧情', '日本', '2014');
+INSERT INTO `movies` VALUES ('民王', 'https://movie.douban.com/subject/26387719/', '8.4', '木村ひさし / 本橋圭太', '远藤宪一 / 菅田将晖 / 本仮屋唯佳', '剧情', '日本', '2015');
+INSERT INTO `movies` VALUES ('大江戸事件帖 美味でそうろう', 'https://movie.douban.com/subject/26413271/', '暂无评分', '濱龍也', '北村一辉 / 南泽奈央 / 中村桥之助', null, '日本', '2015');
+INSERT INTO `movies` VALUES ('和食：千年美味传奇 和食 千年の味のミステリー', 'https://movie.douban.com/subject/25806688/', '7.8', null, '松たか子', '纪录片', '日本', '2013');
+INSERT INTO `movies` VALUES ('救命病栋24小时 2002新春特别篇 救命病棟24時 新春スペシャル 救出タイムリミット', 'https://movie.douban.com/subject/3647121/', '7.7', '田岛大辅 / 水田英成', '江口洋介 / 松雪泰子 / 伊藤英明', '剧情', '日本', '2002');
+INSERT INTO `movies` VALUES ('天使之刃 天使のナイフ', 'https://movie.douban.com/subject/26041853/', '7.8', '永山耕三', '小出惠介 / 仓科加奈 / 若村麻由美', '剧情 / 悬疑', '日本', '2015');
+INSERT INTO `movies` VALUES ('暗金丑岛君 第二季 闇金ウシジマくん Season2', 'https://movie.douban.com/subject/25777508/', '8.5', '山口雅俊', '山田孝之 / 绫野刚 / 崎本大海', '剧情 / 犯罪', '日本', '2014');
+INSERT INTO `movies` VALUES ('父亲的背影 おやじの背中', 'https://movie.douban.com/subject/25892818/', '8.4', '石桥冠 / 鹤桥康夫 / 山室大辅', '田村正和 / 松隆子 / 役所广司', '剧情', '日本', '2014');
+INSERT INTO `movies` VALUES ('昭和64年 64', 'https://movie.douban.com/subject/26258795/', '8.1', '井上刚 / 増田靜雄', '泷正则 / 木村佳乃 / 新井浩文', '悬疑', '日本', '2015');
+INSERT INTO `movies` VALUES ('S-最后的警官 S-最後の警官-', 'https://movie.douban.com/subject/25723209/', '6.4', '平野俊一 / 石井康晴', '向井理 / 绫野刚 / 吹石一惠', '剧情 / 犯罪', '日本', '2014');
+INSERT INTO `movies` VALUES ('阴阳师 陰陽師', 'https://movie.douban.com/subject/26416680/', '5.6', '山下智彦', '市川染五郎 / 堂本光一 / 山本美月', '奇幻', '日本', '2015');
+INSERT INTO `movies` VALUES ('高校教师2003', 'https://movie.douban.com/subject/1763824/', '8.3', '鸭下信一 / 吉田健 / 今井夏木', '藤木直人 / 上户彩 / 成宫宽贵', '剧情', '日本', '2003');
+INSERT INTO `movies` VALUES ('世界奇妙物語 2010年春之特別篇 世にも奇妙な物語 20周年スペシャル・春 〜人気番組競演編〜', 'https://movie.douban.com/subject/4320237/', '6.9', '都筑淳一 / 小林义则', '西田敏行 / 藤本敏史 / 塚地武雅', '悬疑 / 恐怖', '日本', '2010');
+INSERT INTO `movies` VALUES ('世界奇妙物语 2011年秋之特别篇 世にも奇妙な物語 2011秋の特別編', 'https://movie.douban.com/subject/6971315/', '6.8', '植田泰史 / 铃木雅之 / 都築淳一 / 岩田和行 / 小林义则', '三浦春马 / 石桥莲司 / 浅野忠信', '喜剧 / 悬疑 / 恐怖 / 奇幻', '日本', '2011');
+INSERT INTO `movies` VALUES ('世界奇妙物语 15周年特别篇 世にも奇妙な物語 15周年の特別編', 'https://movie.douban.com/subject/2279871/', '8.0', '船津浩一 / 岩田祐二', '伊藤淳史 / 池胁千鹤 / 长谷川京子', '剧情 / 悬疑 / 奇幻 / 惊悚', '日本', '2006');
+INSERT INTO `movies` VALUES ('极道鲜师3 ごくせん3', 'https://movie.douban.com/subject/2981390/', '6.5', '佐藤东弥 / 大谷太郎 / 山下学美', '仲间由纪惠 / 生濑胜久 / 宇津井健', '剧情', '日本', '2008');
+INSERT INTO `movies` VALUES ('世界奇妙物语 2012年春之特別篇 世にも奇妙な物語 2012春の特別編', 'https://movie.douban.com/subject/10573499/', '7.0', '高丸雅隆 / 小林義則 / 佐藤源太 / 植田泰史 / 后藤康介', '铃木福 / 友坂理惠 / 川冈大次郎', '悬疑 / 恐怖', '日本', '2012');
+INSERT INTO `movies` VALUES ('世界奇妙物语 电影特别篇 世にも奇妙な物語 映画の特別編', 'https://movie.douban.com/subject/1305388/', '8.3', '小椋久雄 / 星护 / 铃木雅之 / 落合正幸', '中井贵一 / 山本耕史 / 柏原崇', '喜剧 / 奇幻 / 恐怖 / 爱情', '日本', '2000');
+INSERT INTO `movies` VALUES ('绝对彼氏最终章 絶対彼氏~完全無欠の恋人ロボット~最終章スペシャル', 'https://movie.douban.com/subject/3629246/', '7.3', '土方政人', '速水重道 / 相武纱季 / 水岛宏', null, '日本', '2009');
+INSERT INTO `movies` VALUES ('世界奇妙物语 2008春之特别篇 世にも奇妙な物語 08春の特別編', 'https://movie.douban.com/subject/3027015/', '7.6', '植田泰史 / 杉本达 / 石川淳一 / 岩田和行 / 都築淳一', '伊藤英明 / 藤泽惠麻 / 户田惠梨香', '悬疑 / 恐怖', '日本', '2008');
+INSERT INTO `movies` VALUES ('永不放弃 DOOR TO DOOR〜僕は脳性まひのトップセールスマン〜', 'https://movie.douban.com/subject/3542615/', '8.7', '吉田健', '二宫和也 / 加藤罗莎 / 渡边一计', '剧情', '日本', '2009');
+INSERT INTO `movies` VALUES ('世界奇妙物语 2009春之特别篇 世にも奇妙な物語 豪華キャストで贈る 09春の特別編', 'https://movie.douban.com/subject/3609025/', '7.8', '植田泰史 / 都築淳一 / 城宝秀則 / 岩田和行 / 河野圭太', '市原隼人 / 本乡奏多 / 伊东美咲', '悬疑 / 恐怖', '日本', '2009');
+INSERT INTO `movies` VALUES ('世界奇妙物语 2008秋之特别篇 世にも奇妙な物語 2008秋の特別編', 'https://movie.douban.com/subject/3201843/', '7.8', '植田泰史 / 高丸雅隆 / 小泉德宏 / 土方政人', '内田有纪 / 横山裕 / 深田恭子', '剧情 / 悬疑 / 恐怖', '日本', '2008');
+INSERT INTO `movies` VALUES ('1磅的福音 1ポンドの福音', 'https://movie.douban.com/subject/2330828/', '6.7', '河野英裕 / 小泉守 / 下山润', '龟梨和也 / 黑木美沙 / 小林聪美', '喜剧 / 爱情 / 运动', '日本', '2008');
+INSERT INTO `movies` VALUES ('世界奇妙物语 10周年特别篇 世にも奇妙な物語 10周年', 'https://movie.douban.com/subject/4030421/', '8.7', '三谷幸喜 / 北川悦吏子 / 岩井俊二 / 君塚良一 / 饭田让治', '丰川悦司 / 友坂理惠 / 广末凉子', '悬疑 / 恐怖', '日本', '2000');
+INSERT INTO `movies` VALUES ('猫侍 第一季 猫侍 SEASON 1', 'https://movie.douban.com/subject/25724865/', '8.1', '渡辺武 / 山口义高', '北村一辉 / 平田薫 / 水泽绅吾', '剧情', '日本', '2013');
+INSERT INTO `movies` VALUES ('我家的历史 わが家の歴史', 'https://movie.douban.com/subject/4022142/', '8.8', '河野圭太', '柴崎幸 / 佐藤浩市 / 松本润', '剧情 / 家庭', '日本', '2010');
+INSERT INTO `movies` VALUES ('大姐头 anego', 'https://movie.douban.com/subject/1432676/', '8.0', '吉野洋', '筱原凉子 / 赤西仁 / 友坂理惠', '剧情', '日本', '2005');
+INSERT INTO `movies` VALUES ('血的锁链 赤い絆', 'https://movie.douban.com/subject/4023711/', '7.6', '富本壮吉', '山口百惠 / 国广富之 / 宇津井健', null, '日本', '1977');
+INSERT INTO `movies` VALUES ('果然还是喜欢猫 やっぱり猫が好き', 'https://movie.douban.com/subject/11523309/', '暂无评分', '波多野健', '小林聡美 / 室井滋 / もたいまさこ', '喜剧', '日本', '1988');
+INSERT INTO `movies` VALUES ('双姝情缘 ベストフレンド', 'https://movie.douban.com/subject/6147092/', '暂无评分', '小椋久雄 / 佐藤祐市', '松雪泰子 / 深津絵里 / 高橋克典', '剧情', '日本', '1995');
+INSERT INTO `movies` VALUES ('暗夜第六感 NIGHT HEAD', 'https://movie.douban.com/subject/10744826/', '暂无评分', '饭田让治 / 本广克行 / 落合正幸 / 土方政人 / 土坂浩輝', '豊川悦司 / 武田真治 / 山口リエ', '科幻', '日本', '1992');
+INSERT INTO `movies` VALUES ('我的命运 私の運命', 'https://movie.douban.com/subject/3330122/', '暂无评分', '福澤克雄 / 伊佐野英樹 / 北川雅一 / 土井裕泰 / 生野慈朗', '坂井真紀 / 東幹久 / 近藤芳正', null, '日本', '1994');
+INSERT INTO `movies` VALUES ('谁是最重要的人？ 一番大切な人は誰ですか？', 'https://movie.douban.com/subject/3330131/', '暂无评分', '佐藤东弥 / 长沼诚 / 铃木元', '岸谷五朗 / 牧濑里穗 / 手塚理美', '剧情', '日本', '2004');
+INSERT INTO `movies` VALUES ('接吻的温度 キスの温度 いちばん近い他人', 'https://movie.douban.com/subject/6839149/', '暂无评分', '佐藤东弥', '柳叶敏郎 / 铃木保奈美 / 山口智子', '剧情 / 爱情', '日本', '1990');
+INSERT INTO `movies` VALUES ('最重要的人 いちばん大切なひと', 'https://movie.douban.com/subject/5093087/', '暂无评分', '清弘誠 / 伊佐野英樹', '香取慎吾 / 観月ありさ / 金子賢', null, '日本', '1997');
+INSERT INTO `movies` VALUES ('别在星期天 日曜はダメよ', 'https://movie.douban.com/subject/6392617/', '7.3', null, '田中美佐子 / 山本麻樹 / 唐泽寿明', '剧情 / 爱情', '日本', '1993');
+INSERT INTO `movies` VALUES ('浪花金融道 ナニワ金融道', 'https://movie.douban.com/subject/5924405/', '8.6', '河毛俊作 / 石坂理江子 / 澤田鎌作 / 平野眞', '中居正広 / 小林薫 / 深津絵里', null, '日本', '1996');
+INSERT INTO `movies` VALUES ('爱又怎么样 愛はどうだ', 'https://movie.douban.com/subject/4166433/', '暂无评分', '远藤环', '绪形拳 / 清水美砂 / つみきみほ', '剧情', '日本', '1992');
+INSERT INTO `movies` VALUES ('怪医黑杰克 ブラック・ジャックII 天才女医のウェディングドレス', 'https://movie.douban.com/subject/2024529/', '暂无评分', '堤幸彥', '本木雅弘 / 松雪泰子 / いかりや長介', '剧情', '日本', '2000');
+INSERT INTO `movies` VALUES ('秀逗男护士2 ナースマンがゆく', 'https://movie.douban.com/subject/3644051/', '暂无评分', '大谷太郎 / 池田健司 / 佐久间纪佳', '松冈昌宏 / 香里奈 / 横山惠', '剧情', '日本', '2004');
+INSERT INTO `movies` VALUES ('法医物语 SP きらきらひかる2 Special(1999)', 'https://movie.douban.com/subject/20470180/', '7.5', '河毛俊作', '铃木京香 / 深津绘里 / 柳叶敏郎', '剧情 / 犯罪', '日本', '1999');
+INSERT INTO `movies` VALUES ('妈咪佳人 ママってきれい!?', 'https://movie.douban.com/subject/4166436/', '暂无评分', '吉田秋生', '浅野温子 / 本木雅弘 / 的场浩司', '剧情', '日本', '1991');
+INSERT INTO `movies` VALUES ('浪花金融道 5 ナニワ金融道 5', 'https://movie.douban.com/subject/2051720/', '8.0', '澤田鎌作', '深津绘里 / 中居正广 / 小林薰', null, '日本', '2000');
+INSERT INTO `movies` VALUES ('前男友 モトカレ', 'https://movie.douban.com/subject/25767623/', '暂无评分', '丹羽貴幸 / 土屋哲彦', '岡田義徳 / 岩田さゆり / 大河内奈々子', null, '日本', '2013');
+INSERT INTO `movies` VALUES ('求爱姐妹花 恋のパラダイス', 'https://movie.douban.com/subject/5386994/', '暂无评分', '河毛俊作', '鈴木保奈美 / 本木雅弘 / 菊池桃子', '剧情', '日本', '1990');
+INSERT INTO `movies` VALUES ('只有你看不到 あなただけ見えない', 'https://movie.douban.com/subject/3160932/', '暂无评分', '楠田泰之 / 中島悟 / 柴崎正', '三上博史 / 小泉今日子 / 本木雅弘', null, '日本', '1992');
+INSERT INTO `movies` VALUES ('法医物语3 きらきらひかる3', 'https://movie.douban.com/subject/20470181/', '7.5', '河毛俊作', '松雪泰子 / 深津绘里 / 柳叶敏郎', '剧情 / 犯罪', '日本', '2000');
+INSERT INTO `movies` VALUES ('全为了你 For You', 'https://movie.douban.com/subject/2173135/', '8.2', '宫本理江子 / 岩本仁志 / 田岛大辅', '中山美穗 / 高桥克典 / 香取慎吾', '剧情', '日本', '1995');
+INSERT INTO `movies` VALUES ('年轻太太法力无边 若奥さまは腕まくり!', 'https://movie.douban.com/subject/3320003/', '8.2', '远藤环', '中山 美穗 / 三田村邦彦 / 千石规子', null, '日本', '1988');
+INSERT INTO `movies` VALUES ('隔世未了情 君のためにできること', 'https://movie.douban.com/subject/3055423/', '7.6', '松田秀知', '吉田荣作 / 日方正树', '剧情 / 爱情 / 奇幻', '日本', '1992');
+INSERT INTO `movies` VALUES ('孩子入睡后 子供が寝たあとで', 'https://movie.douban.com/subject/10561916/', '暂无评分', '吉野洋', '柴田恭兵 / 三浦洋一 / 風間トオル', null, '日本', '1992');
+INSERT INTO `movies` VALUES ('亲密爱人 ホームワーク', 'https://movie.douban.com/subject/3778148/', '7.2', '遠藤環', '唐沢寿明 / 清水美砂 / 福山雅治', '剧情', '日本', '1992');
+INSERT INTO `movies` VALUES ('PA三人组 ADブギ', 'https://movie.douban.com/subject/4149291/', '暂无评分', '清弘 誠', '加勢大周 / 濱田雅功 / 的場浩司', null, '日本', '1991');
+INSERT INTO `movies` VALUES ('忠臣蔵', 'https://movie.douban.com/subject/4603522/', '暂无评分', '斎藤光正 / 藤岡浩二郎 / 杉村六郎 / 吉田啓一郎 / 桥本一', '松平健 / 田中好子 / 沢村一樹', null, '日本', '2004');
+INSERT INTO `movies` VALUES ('爱情游戏 恋のバカンス', 'https://movie.douban.com/subject/3330114/', '暂无评分', '水田伸生 / 大平太', '明石家さんま / 鈴木杏樹 / 大河内奈々子', null, '日本', '1997');
+INSERT INTO `movies` VALUES ('浪花金融道2 ナニワ金融道2', 'https://movie.douban.com/subject/5924406/', '8.4', null, '中居正広 / 小林薫 / 伊東四朗', null, '日本', '1996');
+INSERT INTO `movies` VALUES ('古畑任三郎 VS SMAP', 'https://movie.douban.com/subject/1441054/', '8.7', '铃木雅之', '田村正和 / 西村雅彦 / 户田惠子', '剧情 / 悬疑 / 犯罪', '日本', '1999');
+INSERT INTO `movies` VALUES ('飞翔情报室 空飛ぶ広報室', 'https://movie.douban.com/subject/21353042/', '8.1', '土井裕泰 / 山室大辅 / 福田亮介', '新垣结衣 / 绫野刚 / 水野美纪', '剧情', '日本', '2013');
+INSERT INTO `movies` VALUES ('浪花金融道 4 ナニワ金融道・４', 'https://movie.douban.com/subject/5924409/', '7.8', null, '中居正広 / 小林薫 / 瀬戸朝香', null, '日本', '1999');
+INSERT INTO `movies` VALUES ('星期五的恋人 金曜日の恋人たちへ', 'https://movie.douban.com/subject/10437862/', '暂无评分', '森田光則 / 倉貫健二郎 / 冨田勝典 / 高野英治', '藤原紀香 / 高橋克典 / 水野真紀', '剧情', '日本', '2000');
+INSERT INTO `movies` VALUES ('好想谈恋爱 キモチいい恋したい!', 'https://movie.douban.com/subject/3222865/', '暂无评分', '楠田泰之 / 斎藤郁宏 / 赤羽博 / 柴崎正', '安田成美 / 吉田栄作 / 田中美奈子', null, '日本', '1990');
+INSERT INTO `movies` VALUES ('青梅竹马三人行 次男次女ひとりっ子物語', 'https://movie.douban.com/subject/5379167/', '暂无评分', null, '菊池桃子 / 柳葉敏郎 / 田原俊彦', '喜剧 / 爱情 / 家庭', '日本', '1991');
+INSERT INTO `movies` VALUES ('平清盛', 'https://movie.douban.com/subject/6720607/', '暂无评分', '工藤栄一', '松平健 / かたせ梨乃 / 名取裕子', '古装', '日本', '1992');
+INSERT INTO `movies` VALUES ('新同居时代—柴门文特别篇 新 同棲時代〜柴門ふみスペシャル', 'https://movie.douban.com/subject/2033366/', '暂无评分', '国本雅広 / 日名子雅彦', '萩原聖人 / 篠原涼子 / 酒井美紀', '爱情', '日本', '1998');
