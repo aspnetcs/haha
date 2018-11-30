@@ -1,0 +1,9 @@
+<servlet>  
+   <servlet-name>GetLineData</servlet-name>  
+   <servlet-class>my.com.yxcx.line.GetLineData</servlet-class>
+</servlet> 
+
+<servlet-mapping>  
+   <servlet-name>GetLineData</servlet-name>  
+   <url-pattern>/GetLineData</url-pattern>  
+</servlet-mapping>  
